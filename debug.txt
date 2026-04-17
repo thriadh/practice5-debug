@@ -1,0 +1,10 @@
+gdb .\program.exe
+b main
+run
+n
+p x
+x/16xb &x
+
+Output:
+$1 = 5
+Memory bytes displayed successfully
