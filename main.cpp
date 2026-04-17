@@ -2,14 +2,20 @@
 #include "doctest.h"
 
 /**
- * @brief Sum two integers
+ * \brief Adds two integers
+ * \param a first number
+ * \param b second number
+ * \return sum of a and b
  */
 int add(int a, int b) {
     return a + b;
 }
 
 /**
- * @brief Multiply two integers
+ * \brief Multiplies two integers
+ * \param a first number
+ * \param b second number
+ * \return multiplication result
  */
 int multiply(int a, int b) {
     return a * b;
