@@ -1,27 +1,28 @@
-#include <iostream>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
 
+/**
+ * @brief Sum two integers
+ */
 int add(int a, int b) {
-    int result = a + b;
-    return result;
+    return a + b;
 }
 
+/**
+ * @brief Multiply two integers
+ */
 int multiply(int a, int b) {
-    int result = a * b;
-    return result;
+    return a * b;
 }
 
-int main() {
-    int x = 5;
-    int y = 3;
-    int z = 10;
-    int sum = 0;
-    int product = 0;
+// ================= TESTS =================
 
-    sum = add(x, y);
-    product = multiply(sum, z);
+TEST_CASE("Testing add function") {
+    CHECK(add(2, 3) == 5);
+    CHECK(add(-1, 1) == 0);
+}
 
-    std::cout << "Sum: " << sum << std::endl;
-    std::cout << "Product: " << product << std::endl;
-
-    return 0;
+TEST_CASE("Testing multiply function") {
+    CHECK(multiply(2, 3) == 6);
+    CHECK(multiply(5, 0) == 0);
 }
